@@ -21,13 +21,17 @@ def computador_advinhara(x):
     menor = 1
     maior = x
     resposta = ''
+
     while resposta != "c":
         palpite = random.randint(menor, maior)
         resposta = input(f'O palpite {palpite} está muito alto (A), muito baixo (B) ou está correto (C)? R: ').lower()
+
         if resposta == 'a':
             maior = palpite - 1
+
         elif resposta == 'b':
             menor = palpite + 1
+
     print(f'O computador deu o palpite correto que é {palpite}')
 
 computador_advinhara(1001)
